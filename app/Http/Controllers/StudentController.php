@@ -26,20 +26,19 @@ class StudentController extends Controller
         ]);
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $req)
+    public function create()
     {
-        $student = new StudentAdd;
-        $student->class = $req->class;
-        $student->name = $req->name;
-        $student->email = $req->email;
-        $student->save();
-        return view('/studentNew');
-        
+        $eds = \DB::table("educational_programes")->get();
+            return view('addStudent', [
+                'eds' => $eds
+            ]);
     }
 
     /**
@@ -48,9 +47,15 @@ class StudentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
-        //
+        $student = new StudentAdd;
+        $student->class = $req->class;
+        $student->name = $req->name;
+        $student->email = $req->email;
+        $student->save();
+        return view('/studentNew');
+        
     }
 
     /**

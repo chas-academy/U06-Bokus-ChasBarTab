@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     protected $table = 'students';
-
+    public $timestamps = false;
 
     // Method to set the relationship between Students and Orders
     // (one to many) One Student can have multiple orders
