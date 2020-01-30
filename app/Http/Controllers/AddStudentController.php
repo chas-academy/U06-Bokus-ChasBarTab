@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\StudentAdd;
-class StudentController extends Controller
+class AddStudentController extends Controller
 {
     //
 
@@ -20,7 +20,7 @@ class StudentController extends Controller
 
     function add(Request $req)
     {
-        $student = new Student;
+        $student = new StudentAdd;
         $student->class = $req->class;
         $student->name = $req->name;
         $student->email = $req->email;
