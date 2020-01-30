@@ -1,0 +1,23 @@
+
+   Illuminate\Database\QueryException  : SQLSTATE[HY000] [2002] Connection refused (SQL: select * from information_schema.tables where table_schema = CLSDB and table_name = migrations and table_type = 'BASE TABLE')
+
+  at /home/vagrant/code/ChasStudentDebt/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669
+    665|         // If an exception occurs when attempting to run a query, we'll format the error
+    666|         // message to include the bindings with SQL, which will make this exception a
+    667|         // lot more helpful to the developer instead of just the database's errors.
+    668|         catch (Exception $e) {
+  > 669|             throw new QueryException(
+    670|                 $query, $this->prepareBindings($bindings), $e
+    671|             );
+    672|         }
+    673|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[HY000] [2002] Connection refused")
+      /home/vagrant/code/ChasStudentDebt/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+
+  2   PDO::__construct()
+      /home/vagrant/code/ChasStudentDebt/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+
+  Please use the argument -v to see more details.

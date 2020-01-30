@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Educational_programes;
 use Illuminate\Http\Request;
 use App\Student;
@@ -94,4 +95,30 @@ class StudentController extends Controller
     {
         //
     }
+=======
+use Illuminate\Http\Request;
+use App\Student;
+class StudentController extends Controller
+{
+    //
+
+    public function index()
+    {
+            return view('addStudent');
+    }
+
+    function add(Request $req)
+    {
+        //dd($req);
+        //print_r($req->input());
+        $student = new Student;
+        $student->class = $req->class;
+        $student->name = $req->name;
+        $student->email = $req->email;
+        $student->save();
+        return view('/');
+    }
+
+    
+>>>>>>> f074e952f72679cdea7aaad5a27d54d1966f98a9
 }
