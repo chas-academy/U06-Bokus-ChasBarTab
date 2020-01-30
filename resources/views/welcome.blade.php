@@ -90,6 +90,7 @@
             <div class="links">
                 <a href="/students">Lista Studenter</a>
                 <a href="/order">Ny beställning</a>
+                <a href="/studentnew">Lägg till student</a>
                 <a href="/drinks">Drycker</a>
                 <a href="/history">Historia</a>
                 <a href="https://github.com/andreasnyh/ChasStudentDebt/">GitHub</a>

@@ -45,5 +45,6 @@ Route::get('/history/{student_id}', 'HistoryController@show');
 
 
 
-Route::get('/addStudent', 'StudentController@index');
+Route::get('/studentnew', 'StudentController@index');
 Route::get('/submit', 'StudentController@add');
+Route::get('/studentadded', 'StudentController@show');
