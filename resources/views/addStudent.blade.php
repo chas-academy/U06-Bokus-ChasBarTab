@@ -22,7 +22,7 @@
                 </div>
 
                 <form action="/submit" method="ADD">
-                    <select type="text" name="class"  required>
+                    <select type="text" name="class" required>
 
                         <option selected hidden>--Välj Klass--</option>
 
@@ -32,8 +32,8 @@
 
                     </select>
                     <table>
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="text" name="email" placeholder="Email">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="text" name="email" placeholder="Email" required>
                     </table>
                
                     <button type="submit">Lägg till student</button>
