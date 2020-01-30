@@ -10,7 +10,10 @@ class AddStudentController extends Controller
 
     public function index()
     {
-            return view('addStudent');
+        $eds = \DB::table("educational_programes")->get();
+            return view('addStudent', [
+                'eds' => $eds
+            ]);
     }
 
     public function show()

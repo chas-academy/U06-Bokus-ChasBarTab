@@ -24,11 +24,11 @@
                 <form action="/submit" method="ADD">
                     <select type="text" name="class" required>
 
-                        <option selected hidden>--Välj Klass--</option>
+                        <option selected hidden disabled>--Välj Klass--</option>
 
-                        <option name="FWD18" value="FWD18">FWD18</option>
-                        <option name="FWD19" value="FWD19">FWD19</option>
-                        <option name="IK19" value="IK19">IK19</option>
+                    @foreach ($eds as $ed)
+                        <option name="{{$ed->name}}" value="{{$ed->name}}">{{$ed->name}}</option>
+                    @endforeach
 
                     </select>
                     <table>

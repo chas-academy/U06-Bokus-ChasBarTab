@@ -31,9 +31,15 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $req)
     {
-        //
+        $student = new StudentAdd;
+        $student->class = $req->class;
+        $student->name = $req->name;
+        $student->email = $req->email;
+        $student->save();
+        return view('/studentNew');
+        
     }
 
     /**
